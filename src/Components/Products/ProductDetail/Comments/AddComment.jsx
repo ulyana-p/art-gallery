@@ -9,11 +9,6 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const AddComment = () => {
 
-    // const { addUserData, useAuth } = React.useContext(productContext)
-
-    // const currentUser = useAuth()
-
-
     const { addUserData, getUserData } = React.useContext(productContext)
 
     const auth = getAuth();

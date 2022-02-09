@@ -5,7 +5,6 @@ import { calcSubPrice, calcTotalPrice, getProductsInCart } from '../Helpers/Calc
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { API } from '../Helpers/Constants'
 import axios from 'axios'
-import Email from '@mui/icons-material/Email';
 
 
 export const productContext = createContext()
@@ -372,9 +371,7 @@ const ProductsContextProvider = ({ children }) => {
 
     //todo Comments
 
-    const userCollectionRef = collection(db, "comments")
-    // console.log('comments:', userCollectionRef);
-    
+    const userCollectionRef = collection(db, "comments")    
     const addUserData= async (newUser) => {
         try {
             let res = await addDoc(userCollectionRef, newUser)
