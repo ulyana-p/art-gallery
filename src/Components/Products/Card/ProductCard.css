@@ -1,0 +1,19 @@
+@media screen and (max-width: 376px) {
+    .MuiGrid-container {
+      position: relative;
+      display: block !important;
+      align-items: center !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      /* right: 35px; */
+      z-index: -2;
+      width: 100%;
+    }
+    .css-12fs7on{
+        margin: 9px !important;
+    }
+    .css-24n3vm-MuiPaper-root{
+        display: none;
+    }
+
+  }

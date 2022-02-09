@@ -1,0 +1,67 @@
+@media all and (max-width: 1205px){
+    .css-1t29gy6-MuiToolbar-root{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    img.css-1v04gcx{
+        height: 40px;
+    }
+    .css-1kcggdq-MuiInputBase-root{
+        width: 12ch;
+    } 
+    
+    .MuiInputBase-input{
+        width: 6ch;
+    }
+    .css-1lvztma-MuiButtonBase-root-MuiButton-root{
+        font-size: 0.5rem;
+    }
+}
+@media all and (max-width: 987px){
+    button.css-1lvztma-MuiButtonBase-root-MuiButton-root{
+        font-size: 0.7rem;
+    }
+}
+@media all and (max-width: 940px){
+    button.css-1lvztma-MuiButtonBase-root-MuiButton-root{
+        font-size: 0.5rem;
+    }
+    img.css-1v04gcx{
+        height: 30px;
+    }
+}
+@media all and (max-width: 899px){
+    button.css-1lvztma-MuiButtonBase-root-MuiButton-root{
+        display: none;
+    }
+    img.css-1v04gcx{
+        height: 30px;
+    }
+}
+@media all and (max-width: 675px){
+    button.css-1lvztma-MuiButtonBase-root-MuiButton-root{
+        display: none;
+    }
+    button.css-zylse7-MuiButtonBase-root-MuiIconButton-root{
+        display: none;
+    }
+    button.css-1w1rijm-MuiButtonBase-root-MuiButton-root{
+        display: none;
+    }
+   
+    .css-111mgaq-MuiButtonBase-root-MuiButton-root{
+        min-width: 30px;
+    }
+    button.css-i4bv87-MuiSvgIcon-root{
+        display: none;
+    }
+    
+}
+@media all and (max-width: 599px){
+    .css-sll046{
+        display: none;
+    }
+    
+}
+
+

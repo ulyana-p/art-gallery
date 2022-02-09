@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .main{
+    margin: 0;
+   display: flex; justify-content: space-between;
+   position: relative;
+   height: 27rem;
+
+  }
+
+  .left{
+    width: 50%;
+    background:  #cac3bb;;
+
+  }
+  .right{
+    width: 50%;
+  }
+  .main-title{
+    padding: 5rem 0 0 5rem;
+    font-size:3em;
+    width: 70%;
+    color: white;
+    font-family: 'Crete Round', serif;
+  }
+  .main-text{
+    font-family: 'Crete Round', serif;
+    color: white;
+    width: 70%;
+    margin-top: 3rem;
+    padding-left: 5rem;
+
+  }
+
+
+  #img-cover{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+   /* @media all and (max-width: 1230px){
+    .main-title{
+      font-size:205%;
+      width: 80%;
+      height: 50%;
+      z-index: 1;
+    }
+    .css-1kxp130 {
+      padding: 16px;
+      border-radius: 16px;
+      width: 202px  !important;
+      max-width: 400px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255,255,255,0.4);
+      -webkit-backdrop-filter: blur(40px);
+      backdrop-filter: blur(40px);
+      height: 233px  !important;
+  }
+  .main-title{
+    width: 400px;
+  }
+     
+   }
+  
+   @media all and (max-width: 425px){
+  .player{
+    display: none;
+  }
+  .main-title{
+    width: 200px !important;
+  }
+     
+  
+   } */
