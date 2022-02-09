@@ -5,6 +5,7 @@ import { Typography } from '@mui/material';
 import BusinessIcon from '@mui/icons-material/Business';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import './Contacts.css'
 
 const Contacts = () => {
     const map = require('./map.png');
@@ -24,8 +25,8 @@ const Contacts = () => {
       }}
     >
       <Paper sx={{display: 'flex', alignItems: 'center'}}>
-          <div>
-          <img src={map} style={{width: '25em', marginRight: '2em'}} alt='map'/>
+          <div className='left-map'>
+          <img src={map} alt='map' className='map-img'/>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Typography variant='h4' sx={{textAlign: 'center'}}>Contact Us</Typography>

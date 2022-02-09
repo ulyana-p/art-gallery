@@ -45,39 +45,23 @@
   }
 
   
-   /* @media all and (max-width: 1230px){
-    .main-title{
-      font-size:205%;
-      width: 80%;
-      height: 50%;
-      z-index: 1;
+   @media all and (max-width: 769px){
+    h4.main-text{
+      margin-top: 1.5rem;
     }
-    .css-1kxp130 {
-      padding: 16px;
-      border-radius: 16px;
-      width: 202px  !important;
-      max-width: 400px;
-      margin: auto;
-      position: relative;
-      z-index: 1;
-      background-color: rgba(255,255,255,0.4);
-      -webkit-backdrop-filter: blur(40px);
-      backdrop-filter: blur(40px);
-      height: 233px  !important;
   }
-  .main-title{
-    width: 400px;
+
+  @media all and (max-width: 750px){
+    h1.main-title{
+      margin-top: 1.5rem;
+      font-size: 2rem;
+    }
   }
-     
-   }
-  
-   @media all and (max-width: 425px){
-  .player{
-    display: none;
+  @media all and (max-width: 570px){
+    div.main{
+      display: none;
+    }
+    footer.css-dedtb0-MuiContainer-root{
+      display: none;
+    }
   }
-  .main-title{
-    width: 200px !important;
-  }
-     
-  
-   } */

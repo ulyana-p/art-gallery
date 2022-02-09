@@ -8,8 +8,8 @@ const PopUpWindow = (props) => {
     return (props.trigger) ? (
         <div className='popup'>
             <div className='popup-inner'>
-                <div class="heading">ENJOY ART WITH DISCOUNT</div>
-                <p class = 'discount'>Take off 90% sitewide</p>
+                <div className="heading">ENJOY ART WITH DISCOUNT</div>
+                <p className = 'discount'>Take off 90% sitewide</p>
                 <Box
         component="img"
         sx={{
@@ -24,7 +24,7 @@ const PopUpWindow = (props) => {
         src={img}
       />
                 <button className='close-btn' onClick={()=> props.setTrigger(false)}>X</button>
-                <span class="code">CODE:WINRER2022</span>
+                <span className="code">CODE:WINRER2022</span>
                 {props.children}
             </div>
         </div>

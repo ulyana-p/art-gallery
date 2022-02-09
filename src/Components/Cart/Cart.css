@@ -1,0 +1,39 @@
+@media all and (max-width: 768px){
+    .css-11xur9t-MuiPaper-root-MuiTableContainer-root{
+        width: 50%;
+    }
+    .css-1kwtu5z-MuiTable-root{
+        min-width: 300px;
+    }
+}
+
+@media all and (max-width: 550px){
+    .css-11xur9t-MuiPaper-root-MuiTableContainer-root{
+        width: 30%;
+    }
+    .css-1kwtu5z-MuiTable-root{
+        width: 30%;
+    }
+    .inp-cart{
+        width: 25px;
+    }
+    th.css-1wvnaxz-MuiTableCell-root {
+        font-size: 0.5rem;
+    }
+    .css-1nslmh4-MuiTableCell-root {
+        font-size: 0.5rem;
+    }
+    td.css-1bhpkcd-MuiTableCell-root{
+        font-size: 0.5rem;
+        padding: 2px
+    }
+    .css-1nslmh4-MuiTableCell-root.MuiTableCell-head{
+        font-size: 0.5rem;
+        padding: 1px;
+    }
+    .css-ag7rrr-MuiTypography-root{
+        font-size: 1rem;
+    }
+   
+
+}

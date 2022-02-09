@@ -1,0 +1,12 @@
+a{
+    color: #1e2328;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+a:visited {
+    color: #1e2328;
+  }

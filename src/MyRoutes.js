@@ -15,6 +15,7 @@ import ProductDetail from './Components/Products/ProductDetail/ProductDetail';
 import Products from './Components/Products/Products';
 import ProductsContextProvider from './Context/ProductsContext';
 import Footer from './Components/Footer/Footer'
+import Reset from './Components/Auth/Reset/Reset';
 
 const MyRoutes = () => {
     return (
@@ -35,6 +36,7 @@ const MyRoutes = () => {
                     <Route path='/payform' element={<Checkout/>} />
                     <Route path='/about' element={<About />}/>
                     <Route path='/contacts' element={<Contacts />}/>
+                    <Route exact path="/reset" element={<Reset />} />
                 </Routes>
                 <Footer/>
             </BrowserRouter>

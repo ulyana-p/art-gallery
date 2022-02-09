@@ -42,39 +42,138 @@
     width: 100%;
   }
   
-   /* @media all and (max-width: 1230px){
-    .main-title{
-      font-size:205%;
-      width: 80%;
-      height: 50%;
-      z-index: 1;
-    }
-    .css-1kxp130 {
-      padding: 16px;
-      border-radius: 16px;
-      width: 202px  !important;
-      max-width: 400px;
-      margin: auto;
-      position: relative;
-      z-index: 1;
-      background-color: rgba(255,255,255,0.4);
-      -webkit-backdrop-filter: blur(40px);
-      backdrop-filter: blur(40px);
-      height: 233px  !important;
-  }
-  .main-title{
-    width: 400px;
-  }
+   @media all and (max-width: 1220px){
+    .title-cover{
+      font-size: 2rem;
+    } 
      
    }
-  
-   @media all and (max-width: 425px){
-  .player{
-    display: none;
+
+   @media all and (max-width: 1020px){
+    #art-cover{
+      height: auto;
+      align-items: flex-start;
+    }
+  .main-cover{
+    align-items: flex-start;
+    height: 15rem;
+  }  
+  .title-cover{
+    font-size: 1.5rem;
+    width: 64%;
+    margin: 0
+  }   
+  .text-cover{
+    font-size: 0.8rem;
   }
-  .main-title{
-    width: 200px !important;
+  .cover-content{
+    margin-top: 1.5rem;
+    width: 45%;
   }
-     
-  
-   } */
+  button.css-1tglh0y-MuiButtonBase-root-MuiButton-root{
+    width: 5rem;
+    font-size: 0.5rem;
+    padding: 4px 4px;
+  }
+   }
+
+   @media all and (max-width: 790px){
+    .text-cover{
+      width: 60%;
+      font-size: 0.6rem;
+    }
+
+   }
+
+   @media all and (max-width: 690px){
+    .text-cover{
+      width: 50%;
+      font-size: 0.6rem;
+      margin: 0.6rem 0;
+    }
+    .title-cover{
+      font-size: 1rem;
+      width: 50%;
+    }
+    .css-vwn4t2-MuiPaper-root-MuiCard-root{
+      width: 100%;
+    }
+    div.css-18k87ye-MuiTypography-root{
+      font-size: 1rem;
+    }
+    .css-hyltko-MuiTypography-root{
+      font-size: 0.8rem;
+    }
+    .css-r40f8v-MuiTypography-root{
+      font-size: 0.7rem;
+    }
+    .css-o69gx8-MuiCardMedia-root{
+      height: 8rem;
+
+    }
+    p.css-ahj2mt-MuiTypography-root{
+      font-size: 0.8rem;
+    }
+    .main-cover{
+      height: 11rem;
+    }
+   }
+
+   @media all and (max-width: 612px){
+    .text-cover{
+      width: 50%;
+      font-size: 0.4rem;
+      margin: 0.4rem 0;
+    }
+    .title-cover{
+      font-size: 0.8rem;
+      width: 50%;
+    }
+    .main-cover {
+      height: 8rem;
+  }
+   }
+
+   @media all and (max-width: 551px){
+    .css-8v0fa4-MuiGrid-root{
+      flex-grow: 1;
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+ 
+   }
+
+   @media all and (max-width: 492px){
+    .text-cover{
+      width: 50%;
+      font-size: 0.3rem;
+      margin: 0.3rem 0;
+    }
+    .title-cover{
+      font-size: 0.6rem;
+      width: 50%;
+    }
+    button.css-1tglh0y-MuiButtonBase-root-MuiButton-root{
+      width: 2rem;
+      font-size: 0.3rem;
+      padding: 2px 2px;
+    }
+    .main-cover {
+      height: 6rem;
+  }
+
+   }
+
+   @media all and (max-width: 378px){
+    .cover-content{
+      margin-top: 0.7rem;
+    }
+    .text-cover{
+      width: 70%;
+    }
+    .main-cover {
+      height: 4rem;
+  }
+   }
+
+   

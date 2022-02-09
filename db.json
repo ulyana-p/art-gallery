@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "title": "Dream",
+      "painter": "Marc Chagall",
+      "date": "1918",
+      "image": "https://uploads0.wikiart.org/images/marc-chagall/self-portrait-with-muse-dream-1918.jpg!Large.jpg",
+      "price": 80,
+      "description": "He pictured in it what he saw in a dream, the appearance of an angel in a square empty room, bringing with him blue air and light. ... The features of the prophetic dream are emphasized by a simple scale of the picture, including black, white, and blue.",
+      "location": "Liozna, near Vitebsk, Belarus",
+      "rights": "Private Collection",
+      "id": 1
+    },
+    {
+      "title": "The Starry Night",
+      "painter": "Vincent van Gogh",
+      "date": "1889",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/540px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "price": 100,
+      "description": "Although The Starry Night was painted during the day in Van Gogh's ground-floor studio, it would be inaccurate to state that the picture was painted from memory. The view has been identified as the one from his bedroom window, facing east, a view which Van Gogh painted variations of no fewer than twenty-one times, including The Starry Night. \"Through the iron-barred window,\" he wrote to his brother, Theo, around 23 May 1889, \"I can see an enclosed square of wheat ... above which, in the morning, I watch the sun rise in all its glory.\"",
+      "location": "Provence, France",
+      "rights": "Museum of Modern Art, New York City",
+      "id": 2
+    },
+    {
+      "title": "The Fighting Temeraire",
+      "painter": "J.M.W. Turner",
+      "date": "1839",
+      "image": "https://d7hftxdivxxvm.cloudfront.net/?resize_to=width&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2FvPARU-XwZWcHHm8CzLXjwQ%2Flarger.jpg&width=1200&quality=80",
+      "price": 150,
+      "description": "The Fighting Temeraire, tugged to her last berth to be broken up, 1838 is an oil painting by the English artist Joseph Mallord William Turner, painted in 1838 and exhibited at the Royal Academy in 1839. ",
+      "location": "Chelsea, GB",
+      "rights": "The National Gallery, London",
+      "id": 3
+    },
+    {
+      "title": "The Kiss",
+      "painter": "Gustav Klimt",
+      "date": "1908",
+      "image": "https://www.gustav-klimt.com/images/paintings/The-Kiss.jpg",
+      "price": 90,
+      "description": "“The Kiss”, probably the most popular work by Gustav Klimt, was first exhibited in 1908 at the Kunstschau art exhibition on the site of today’s Konzerthaus. The Ministry bought it from there for the sum of 25,000 Kronen and thus secured for the state one of the icons of Viennese Jugendstil and indeed of European modern art. It undoubtedly represents the culmination of the phase known as the “Golden Epoch”. In this decade, the artist created a puzzling, ornamental encoded programme that revolved around the mystery of existence, love and fulfilment through art",
+      "location": "Vienna, Austria",
+      "rights": "Austrian Gallery Belvedere",
+      "id": 4
+    },
+    {
+      "title": "Impression, Sunrise",
+      "painter": "Claude Monet",
+      "date": "1872",
+      "image": "https://www.prints-online.com/p/164/claude-monet-1840-1926-impression-14327034.jpg.webp",
+      "price": 50,
+      "description": "When Impression, Sunrise hung at its first exhibition in 1874, art critic Louis Leroy derisively used the term “Impressionistic,” from the title of this painting, to describe Monet’s works. This term was quickly adopted by what were soon to be known as the Impressionist painters, and the exhibition which included other works by Impressionist artists, was from then on referred to as the “Impressionist Exhibition.” This painting was later stolen in 1985 from the Musee Marmottan Monet in Paris, but was recovered undamaged in 1990, and was put back on display at the museum in 1991.",
+      "location": "port of Le Havre, France",
+      "rights": "Musée Marmottan Monet, Paris, France",
+      "id": 5
+    },
+    {
+      "title": "Starry Night Rhone",
+      "painter": "Vincent van Gogh",
+      "date": "1888",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1920px-Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "price": 95,
+      "description": "The view is from the quay on the east side of the Rhône, into the knee of the river towards the western shore: coming down from the north, the Rhône turns to the right at this point to surround the rocks on which Arles is built. From the towers of Saint-Julien and Saint-Trophime at the left, the spectator follows the east bank up to the iron bridge connecting Arles to the suburb of Trinquetaille on the right, western bank. This implies a view from Place Lamartine towards the southwest. 43.682367°N 4.630287°E Though, as noted below this is not consistent with the stars portrayed as the Plough in Ursa Major would not be visible in that direction.",
+      "location": "Arles, France",
+      "rights": "Musée d'Orsay, Paris",
+      "id": 6
+    },
+    {
+      "title": "The Great Wave off Kanagawa",
+      "painter": "Hokusai",
+      "date": "1830",
+      "image": "https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/1621893054378-I86G3NSQI8OLQ2U59KVS/fascinating-video-explores-hokusais-iconic-painting-the-great-wave-off-kanagawa.jpg",
+      "price": 98,
+      "description": "The Great Wave off Kanagawa, also known as The Great Wave or The Wave, is a woodblock print by the Japanese ukiyo-e artist Hokusai. It was published sometime between 1829 and 1833 in the late Edo period as the first print in Hokusai's series Thirty-six Views of Mount Fuji.",
+      "location": "Sagami Bay, Japan",
+      "rights": "Numerous",
+      "id": 7
+    },
+    {
+      "title": "Café Terrace at Night",
+      "painter": "Vincent van Gogh",
+      "date": "1888",
+      "image": "https://1700005anamarialisaru.files.wordpress.com/2019/05/vg631-1000x1000.jpg",
+      "price": 120,
+      "description": "Café Terrace at Night is an 1888 oil painting by the Dutch artist Vincent van Gogh. It is also known as The Cafe Terrace on the Place du Forum, and, when first exhibited in 1891, was entitled Coffeehouse, in the evening. Van Gogh painted Café Terrace at Night in Arles, France, in mid-September 1888.",
+      "location": "Place du Forum, Arles",
+      "rights": "Kröller-Müller Museum",
+      "id": 8
+    },
+    {
+      "title": "A Sunday Afternoon",
+      "painter": "Georges Seurat",
+      "date": "1886",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.jpg/440px-A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.jpg",
+      "price": 45,
+      "description": "A Sunday Afternoon on the Island of La Grande Jatte was painted from 1884 to 1886 and is Georges Seurat's most famous work. A leading example of pointillist technique, executed on a large canvas, it is a founding work of the neo-impressionist movement.",
+      "location": "Île de la Jatte, France",
+      "rights": "The Art Institute of Chicago",
+      "id": 9
+    },
+    {
+      "title": "Girl with a Pearl Earring",
+      "painter": "Johannes Vermeer",
+      "date": "1665",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/715px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg",
+      "price": 300,
+      "description": "Girl with a Pearl Earring is an oil painting by Dutch Golden Age painter Johannes Vermeer, dated c. 1665. Going by various names over the centuries, it became known by its present title towards the end of the 20th century after the earring worn by the girl portrayed there.",
+      "location": "Delft, Netherlands",
+      "rights": "Mauritshuis, The Hague, Netherlands",
+      "id": 10
+    },
+    {
+      "title": "Six Studies of Pillows",
+      "painter": "Albrecht Dürer",
+      "date": "1493",
+      "image": "https://s3-eu-west-1.amazonaws.com/dailyartartwork/img-201806235b2ea1813df41_ipad",
+      "price": 75,
+      "description": "Among the masterpieces of European draftsmanship, this iconic self-portrait study evokes the awakening artistic consciousness of the twenty-two-year-old German Renaissance artist Albrecht Dürer. Probably produced with the aid of a mirror, the head and the hand were preparatory for his painted Self-Portrait of 1493 (Musée du Louvre, Paris), considered one of the earliest independent self-portraits in Western painting. Durer’s exploration of self-portraiture in several drawings and paintings is characterized by an arresting directness that was highly unusual at the time. The artist’s calligraphic precision and expressiveness of line is also found in the study of a pillow at the bottom of the sheet, a subject that he continued to explore on the reverse.",
+      "location": "German, Nuremberg",
+      "rights": "Robert Lehman Collection, 1975",
+      "id": 11
+    },
+    {
+      "title": "Feminine Wave",
+      "painter": "Hokusai",
+      "date": "1845",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Femenine_wave.jpg/1280px-Femenine_wave.jpg",
+      "price": 30,
+      "description": "Feminine Wave is an artwork by the Japanese master artist Hokusai. Hokusai is best known for his woodblock paintings and, though he lived back in the eighteenth and nineteenth centuries, he is still considered one of the finest woodblock artists that the world has ever seen.",
+      "location": "Obuse, Japan",
+      "rights": "British Museum",
+      "id": 12
+    }
+  ]
+}

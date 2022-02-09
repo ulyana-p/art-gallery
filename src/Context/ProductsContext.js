@@ -2,16 +2,18 @@ import React, { createContext, useEffect, useReducer, useState } from 'react';
 import { db, auth } from '../firebase-config';
 import { addDoc, collection, doc, getDocs, updateDoc, getDoc, deleteDoc, query, orderBy, startAfter, limit, startAt } from 'firebase/firestore'
 import { calcSubPrice, calcTotalPrice, getProductsInCart } from '../Helpers/CalcPrice';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { API } from '../Helpers/Constants'
+import axios from 'axios'
+import Email from '@mui/icons-material/Email';
 
 
 export const productContext = createContext()
 
 const INIT_STATE = { 
-    products: [],
-    edit: [],
-    paginatedPages: {},
+    products: null,
+    edit: null,
+    paginatedPages: 1,
     detail: {},
     cart: {},
     cartLength: 0,
@@ -24,17 +26,13 @@ const reducer = (state = INIT_STATE, action) => {
     switch (action.type) {
         case 'GET_PRODUCTS':
             return {
-                ...state, products: action.payload,
-                // paginatedPages: Math.ceil(action.payload ['x-total-count'] / 3)
+                ...state, products: action.payload.data,
+                paginatedPages: Math.ceil(action.payload.headers ['x-total-count'] / 3)
             }
         case 'GET_PRODUCT_TO_EDIT':
             return {
                 ...state, edit: action.payload
             }
-        // case 'PAGINATION':
-        //     return {
-        //         ...state, paginatedPages: action.payload
-        //     }
         case 'GET_PRODUCT_DETAIL':
             return {
                 ...state, detail: action.payload
@@ -66,14 +64,12 @@ const reducer = (state = INIT_STATE, action) => {
 
 const ProductsContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
-    const productsCollectionRef = collection(db, "products")
-    const q = query(productsCollectionRef, orderBy('createdAt'), limit(2))
-    // console.log('this is q:', q);
+ 
 
-    //todo CREATE
+    //! Create
     const addProduct = async (newProduct) => {
-        try {
-            let res = await addDoc(productsCollectionRef, newProduct)
+        try{
+            let res = await axios.post(API, newProduct)
             getProducts()
             return res
         } catch (error) {
@@ -81,123 +77,64 @@ const ProductsContextProvider = ({ children }) => {
         }
     }
 
-    //todo READ
+    //! Read
     const getProducts = async () => {
-        try {
-            // const qq = query(productsCollectionRef, orderBy('name'), limit(10))
-            // console.log('get', qq);
-            const data = await getDocs(productsCollectionRef)
-            console.log(data.docs);
-            let res = data.docs.map((doc) => ({
-                ...doc.data(), id: doc.id
-            }))
-            // console.log('res:', res);
-            // const q = query(res, orderBy('name'), limit(2))
-            let action = {
-                type: 'GET_PRODUCTS',
-                payload: res
-            }
-            dispatch(action)
-
-            // console.log(action);
-        } catch (error) {
-            console.log('GET_PRODUCTS_ERR', error);
-        }
-    }
-
-    //todo UPDATE
-    const editProduct = async (id) => {
-        try {
-            const docRef = doc(db, "products", id);
-            const docSnap = await getDoc(docRef);
-
-            let action = {
-                type: 'GET_PRODUCT_TO_EDIT',
-                payload: docSnap.data()
-            }
-            dispatch(action)
-        } catch (error) {
-            console.log('EDIT_PRODUCT_ERR', error);
-        }
-    }
-
-    //todo Save edited product
-    const saveEditedProduct = async (id, updatedProduct) => {
-        try {
-            const docRef = doc(db, "products", id);
-
-            // const productDoc = doc(db, "products", id)
-            // const newFileds = {price: price + 1}
-            console.log(updatedProduct);
-            let res = await updateDoc(docRef, updatedProduct)
-            getProducts()
-        } catch (error) {
-            console.log('SAVE_PRODUCT_ERR', error);
-        }
-    }
-
-    // console.log(state, 'state');
-    // console.log(state.products, 'products');
-    // console.log(state.edit, 'edit');
-
-
-
-    //todo DELETE
-    const deleteProduct = async (id) => {
-        try {
-            const docRef = doc(db, "products", id);
-            await deleteDoc(docRef)
-            getProducts()
-           
+        try{
+           let res = await axios(`${API}${window.location.search}`)
+           let action = {
+               type: 'GET_PRODUCTS',
+               payload: res            
+           }
+           dispatch(action)
+        //    console.log(res);
         } catch (error) {
             console.log(error);
         }
     }
 
-        // const field = 'name';
-        // const pageSize = 2;
+    //! update
+    const editProduct = async (id) => {
+        try {
+            let res = await axios(`${API}/${id}`)
+            let action = {
+                type: 'GET_PRODUCT_TO_EDIT',
+                payload: res.data
+            }
+            dispatch(action)
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
-        // const q = query(productsCollectionRef, orderBy(field), limit(pageSize));
-        // console.log(q);
+    //! Save edited product
+    const saveEditedProduct = async (updatedProduct) => {
+        try {
+            await axios.patch(`${API}/${updatedProduct.id}`, updatedProduct)
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
-        // function nextPage(last) {
-        //     return productsCollectionRef.orderBy(field)
-        //               .startAfter(last[field])
-        //               .limit(pageSize);
-        // }
+    //! Delete
+    const deleteProduct = async (id) => {
+        try {
+            await axios.delete(`${API}/${id}`)
+            getProducts()
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
-        // function prevPage(first) {
-        //     return productsCollectionRef.orderBy(field)
-        //               .startAfter(first[field])
-        //               .limitToLast(pageSize);
-        // }
-
-    // //todo pagination 
-  
-    // const pagination = async () => {
-    //     const q = query(productsCollectionRef, orderBy("createdAt"), limit(2));
-    //     console.log(q);
-    //     let action = {
-    //         type: 'PAGINATION',
-    //         payload: q
-    //     }
-    //     dispatch(action)
-    //     getProducts()
-    //     console.log('q', action.payload);
-    // }
-
-    // console.log('page', state.paginatedPages);
-
-      //! get detail
-      const getDetail = async (id) => {
-        const docRef = doc(db, "products", id);
-        const docSnap = await getDoc(docRef);
+    //! get detail
+    const getDetail = async (id) => {
+        const res = await axios(`${API}/${id}`)
         let action = {
             type: 'GET_PRODUCT_DETAIL',
-            payload: docSnap.data()
+            payload: res.data
         }
         dispatch(action)
     }
+
 
     //! Cart
 
@@ -291,16 +228,16 @@ const ProductsContextProvider = ({ children }) => {
  
     const deleteFromCart =(id, price)=>{ 
         let items = JSON.parse(localStorage.getItem('cart')) 
-        console.log(items);
         for (let i =0; i< items.products.length; i++) { 
-            let targetItem = items.products[i].item.id
-            let targetItemPrice = items.products[i].item.price  
-            if (targetItem == id) { 
-                items.products.splice(i, 1); 
-            } 
-            if (targetItemPrice == price){ 
-                items.totalPrice = items.totalPrice - price 
-            } 
+          let targetItem = JSON.parse(items.products[i].item.id); 
+          let targetItemPrice = JSON.parse(items.products[i].item.price); 
+           
+          if (targetItem == id) { 
+              items.products.splice(i, 1); 
+          } 
+          if (targetItemPrice == price){ 
+            items.totalPrice = items.totalPrice - price 
+          } 
     } 
       items = JSON.stringify(items); 
     //   console.log(items) 
@@ -313,8 +250,14 @@ const ProductsContextProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    function signIn(email, password) {
-        return signInWithEmailAndPassword(auth, email, password)
+    const signIn = async (email, password) => {
+        // return signInWithEmailAndPassword(auth, email, password)
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+          } catch (err) {
+            console.error(err);
+            alert('Wrong password');
+          }
     }
 
     function useAuth () {
@@ -332,6 +275,17 @@ const ProductsContextProvider = ({ children }) => {
     function logout(){
         return signOut(auth)
     }
+
+    //!reset password
+
+    const sendPasswordReset = async (email) => {
+        try {
+          await sendPasswordResetEmail(auth, email);
+          alert("Password reset link sent!");
+        } catch (error) {
+          console.error(error);
+        }
+      };
 
     //! favorites
 
@@ -400,11 +354,10 @@ const ProductsContextProvider = ({ children }) => {
 
     
     //! DeleteFromFavorites
- 
     const deleteFromFavorites =(id)=>{ 
         let items = JSON.parse(localStorage.getItem('favorites')) 
         for (let i =0; i< items.products.length; i++) { 
-          let targetItem = items.products[i].item.id;            
+          let targetItem = JSON.parse(items.products[i].item.id);            
           if (targetItem === id) { 
               items.products.splice(i, 1); 
           } 
@@ -449,12 +402,11 @@ const ProductsContextProvider = ({ children }) => {
     }
 
 
-
     return (
         <productContext.Provider value={{
             products: state.products,
             edit: state.edit,
-            // paginatedPages: state.paginatedPages,
+            paginatedPages: state.paginatedPages,
             detail: state.detail,
             cart: state.cart,
             cartLength: state.cartLength,
@@ -483,7 +435,8 @@ const ProductsContextProvider = ({ children }) => {
             getFavorites,
             deleteFromFavorites,
             addUserData,
-            getUserData
+            getUserData,
+            sendPasswordReset
         }}>
             {children}
         </productContext.Provider>

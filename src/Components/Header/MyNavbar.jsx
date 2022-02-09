@@ -246,7 +246,7 @@ export default function MyNavbar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
+            sx={{ display: {  sm: 'block' } }}
           >
             <Link to='/'>
                  <Box

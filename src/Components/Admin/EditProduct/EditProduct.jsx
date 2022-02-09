@@ -26,9 +26,7 @@ export default function EditProduct() {
     })
 
     React.useEffect(() => {
-        if(id){
             editProduct(id)
-        }
     }, [id])
 
     React.useEffect(() => {
@@ -46,7 +44,7 @@ export default function EditProduct() {
     }
 
     const handleSave = () => {
-        saveEditedProduct(id, values)
+        saveEditedProduct(values)
     }
 
     const customTheme = createTheme({
@@ -57,7 +55,7 @@ export default function EditProduct() {
                 contrastText: "#ffff"
             },
             warning: {
-                main: "#f5b301",
+                main: 'rgb(31, 96, 124)',
                 contrastText: "#3b3f46"
 
             }

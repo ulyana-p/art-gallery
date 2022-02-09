@@ -6,6 +6,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, createTheme, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Slider, ThemeProvider, Typography } from '@mui/material';
 import { productContext } from '../../../Context/ProductsContext';
+import './Sidebar.css'
 
 const customTheme = createTheme({
     palette: {
@@ -72,14 +73,14 @@ const Sidebar = () => {
 
     return (
         <ThemeProvider theme={customTheme}>
-            <Box sx={{ flexGrow: 1}}>
+            <Box sx={{ flexGrow: 1}} className='sidebar'>
                 <Grid >
                     <Grid>
-                        <Paper  sx={{height: '42em', px: 4, py: 8}}>
+                        <Paper  sx={{height: '45em', px: 4, py: 8}}>
                             <FormControl component='fieldset'>
                                 <FormLabel>
                                     <Typography variant='h6' sx={{color: "#1e2328"}}>Sort by Year:</Typography></FormLabel>
-                                <RadioGroup aria-label='date' name='date' value={date} onChange={(e) => handleChangeType('date', e.target.value)}>
+                                <RadioGroup aria-label='gender' name='gender1' value={date} onChange={(e) => handleChangeType('date', e.target.value)}>
                                     <FormControlLabel value='1493' control={<Radio/>} label='1493'/>
                                     <FormControlLabel value='1503' control={<Radio/>} label='1503'/>
                                     <FormControlLabel value='1665' control={<Radio/>} label='1665'/>
@@ -96,12 +97,12 @@ const Sidebar = () => {
                                 </RadioGroup>
                             </FormControl>
                             <Grid sx={{my: 4}}>
-                                <Typography variant='h6' sx={{color: "#1e2328"}}>Sort by price:</Typography>
+                                <Typography variant='body2' sx={{color: "#1e2328"}}>Sort by price:</Typography>
                                 <Slider 
                                     onChange={(e) => filterProducts('price_lte', e.target.value)}
                                     valueLabelDisplay='auto'
-                                    max={5000}
-                                    step={50}
+                                    max={1000}
+                                    step={10}
                                     sx={{color: "#1e2328"}}
                                 />
                             </Grid>

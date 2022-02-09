@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom'
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { productContext } from '../../Context/ProductsContext';
+import './Cart.css'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -60,7 +61,7 @@ export default function Cart() {
   return (
     <ThemeProvider theme={customTheme}>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <Table sx={{ minWidth: 300 }} aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Image</StyledTableCell>
@@ -83,7 +84,8 @@ export default function Cart() {
                           <StyledTableCell align="right">{elem.item.title}</StyledTableCell>
                           <StyledTableCell align="right">{elem.item.price}</StyledTableCell>
                           <StyledTableCell align="right">
-                              <input 
+                              <input
+                                  className='inp-cart' 
                                   type="number"
                                   value={elem.count}
                                   onChange={(e) => changeProductCount(e.target.value, elem.item.id)}

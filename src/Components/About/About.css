@@ -1,5 +1,9 @@
 .rot{
-
   width: 25rem;
 }
 
+@media all and (max-width: 607px){
+  img.rot{
+    display: none;
+  }
+}

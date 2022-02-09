@@ -22,8 +22,8 @@ const theme = createTheme({
           contrastText: "#ffff"
         },
         warning: {
-          main: "#f5b301",
-          contrastText: "#3b3f46"  
+          main: 'rgb(31, 96, 124)',
+          contrastText: "#ffff"  
         }
       }
 });

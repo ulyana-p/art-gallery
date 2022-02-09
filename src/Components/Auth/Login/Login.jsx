@@ -13,6 +13,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import { productContext } from '../../../Context/ProductsContext';
+import './Login.css'
 
 
 const theme = createTheme({
@@ -22,8 +23,8 @@ const theme = createTheme({
           contrastText: "#ffff"
         },
         warning: {
-          main: "#f5b301",
-          contrastText: "#3b3f46"  
+          main: 'rgb(31, 96, 124)',
+          contrastText: "#ffff"  
         }
       }
 });
@@ -45,7 +46,7 @@ export default function Login() {
   };
 
   async function handleSignIn(email, password){
-      console.log(email, password, 'here')
+      // console.log(email, password, 'here')
     try {
       await signIn(email, password)
     } catch (error){
@@ -107,11 +108,13 @@ export default function Login() {
             >
               Sign In
             </Button>
-            <Grid container justifyContent="center">
+            <Grid container >
               <Grid item>
-                <Link to='/register' style={{color: 'secondary', textDecoration: 'none'}}>
-                  {"Don't have an account? Sign Up"}
+                <Link to='/register'>
+                  Don't have an account? Sign Up
                 </Link>
+                <br />
+                <Link to="/reset">Forgot Password</Link>
               </Grid>
             </Grid>
           </Box>

@@ -25,8 +25,8 @@ export default function AddProduct() {
                 contrastText: "#ffff"
             },
             warning: {
-                main: "#f5b301",
-                contrastText: "#3b3f46"
+                main: 'rgb(31, 96, 124)',
+                contrastText: "#ffff"
 
             }
         }
@@ -44,7 +44,7 @@ export default function AddProduct() {
     }
 
     const handleSave = () => {
-        if (!values.image) values.image = 'https://content.onliner.by/news/1100x5616/472baa6904f365c4bae96d6b77c13010.jpeg'
+        if (!values.image) values.image = 'https://media.istockphoto.com/vectors/image-upload-icon-vector-id1206577970?k=20&m=1206577970&s=170667a&w=0&h=53at7rxKBtZd8woBU2fXSN9nUygXzabXPN4QPxgdsCA='
         addProduct({ ...values, price: +values.price })
         navigate('/')
     }
@@ -67,7 +67,7 @@ export default function AddProduct() {
                     <h3 style={{ textAlign: 'center' }}>Add Product</h3>
                     <div style={{ display: 'flex', justifyContent: 'spase-around', color: 'black' }}>
                         <div>
-                            <img src={values.image ? values.image : 'https://content.onliner.by/news/1100x5616/472baa6904f365c4bae96d6b77c13010.jpeg'} alt="product image" style={{ width: '300px' }} />
+                            <img src={values.image ? values.image : 'https://media.istockphoto.com/vectors/image-upload-icon-vector-id1206577970?k=20&m=1206577970&s=170667a&w=0&h=53at7rxKBtZd8woBU2fXSN9nUygXzabXPN4QPxgdsCA='} alt="product image" style={{ width: '300px' }} />
                         </div>
                         <div
                             style={{
